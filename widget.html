@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Current Time</title>
+</head>
+
+<body>
+  <style>
+    .greeting {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 30px;
+      margin-top: 5px;
+      margin-bottom: 10px; 
+    }
+    .date {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+    .time {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+  </style>
+  <div class = "greeting">
+    Good <span id="timeofday"></span>, Sylvester
+  </div>
+  <div class = "date">
+    Today's date is June 24th, 2022.
+  </div>
+  <div class = "time">
+    The current time is 1:01 PM.
+  </div>
+  <script>
+    var date = new Date();
+    var hour = date.getHours();
+    var timeofday = "";
+    
+    function time() {
+      if(hour < 12){
+        timeofday = "morning";
+      }else if (hour >= 12 && hour < 18) {
+       timeofday = "afternoon";
+      } else if(hour >= 18 && hour <= 24) {
+       timeofday = "evening";
+      }
+      document.getElementById('timeofday').innerHTML = date.getSeconds();
+    }
+
+    setInterval(time(), 1);
+
+  </script>
+</body>
+
+</html>
