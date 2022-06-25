@@ -11,6 +11,7 @@
       font-weight: 500;
       color: rgb(55, 53, 47);
       margin-top: 5px;
+      margin-left: 3px;
       margin-bottom: 5px; 
     }
     .date {
@@ -18,6 +19,7 @@
       font-size: 25px;
       font-weight: 500;
       color: rgb(55, 53, 47);
+      margin-left: 3px;
       margin-bottom: 5px;
     }
     .time {
@@ -25,10 +27,11 @@
       font-size: 20px;
       font-weight: 500;
       color: rgb(55, 53, 47);
+      margin-left: 3px;
     }
   </style>
   <div class = "greeting">
-    Good <span id="timeofday"></span>, Sylvester.
+    Good <span id="timeofday"></span>, <span id="username"></span>.
   </div>
   <div class = "date">
     Today's date is <span id="month"></span> <span id="day"></span><span id="suffix"></span>, <span id="year"></span>. It is a <span id="weekday"></span>.
@@ -37,6 +40,9 @@
     The current time is <span id="hour"></span>:<span id="minutes"></span>:<span id="seconds"></span> <span id="ampm"></span>.
   </div>
   <script>
+    var name = "Sylvester";
+    document.getElementById('username').innerHTML = name;
+
     function date() {
       var date = new Date();
       var day = date.getDate();
