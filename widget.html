@@ -55,7 +55,7 @@
       var secZero = "";
       var meridiem = "AM";
       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      const weekdays = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
       if(hour < 12){
         timeofday = "morning";
       }else if (hour >= 12 && hour < 18) {
@@ -70,7 +70,7 @@
       document.getElementById('day').innerHTML = day;
       document.getElementById('suffix').innerHTML = getSuffix(day);
       document.getElementById('year').innerHTML = date.getFullYear();
-      document.getElementById('weekday').innerHTML = weekdays[date.getDay() - 1];
+      document.getElementById('weekday').innerHTML = weekdays[date.getDay()];
 
       //time
       if(hour > 12) {
